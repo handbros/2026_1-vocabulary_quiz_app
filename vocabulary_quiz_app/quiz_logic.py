@@ -9,6 +9,7 @@ from dataclasses import dataclass
 class Word:
     term: str
     meaning: str
+    example: str
 
 
 def normalize_answer(text: str) -> str:
