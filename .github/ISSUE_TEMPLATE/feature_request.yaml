@@ -1,0 +1,25 @@
+name: 기능 제안
+description: Vocabulary Quiz App을(를) 위해 아이디어를 제공하고 싶습니다.
+title: "기능 제안 제목"
+labels: [enhancement]
+body:
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 이 기능 제안은 어떤 문제와 관련이 있나요? 상세히 서술해주세요.
+      description: 무엇이 문제인지 명확하고 핵심적인 내용을 공유해주세요.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 그 문제를 어떻게 해결했으면 좋겠다고 생각하시나요?
+      description: 당신이 원하는 해결 방안을 서술해주세요.
+  - type: textarea
+    attributes:
+      label: 해당 방안 외에 또 다른 대체안도 있나요?
+      description: 첫 번째 해결 방안의 실현이 불가능 할 때의 대체안을 생각해두신게 있나요? 있다면 공유해주세요.
+  - type: textarea
+    attributes:
+      label: 기타
+      description: 참고용 스크린샷을 첨부하거나 추가적으로 언급하고 싶은 내용을 작성해주세요.

@@ -1,0 +1,43 @@
+name: 버그 리포트
+description: 기능 개선을 위해 버그 정보를 제공하고 싶습니다.
+title: "버그 리포트 제목"
+labels: [bug]
+body:
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 어떤 버그인가요?
+      description: 어떤 문제를 겪으셨는지 간결하게 설명해주세요.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 어떻게 재현하나요?
+      description: 버그 동작을 재현하기 위한 동작 순서를 알려주세요.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 예상했던 결과
+      description: 당신이 원래 기대하였던 실행 결과는 무엇이었는지 알려주세요.
+  - type: textarea
+    attributes:
+      label: 스크린샷
+      description: 문제가 발생한 당시의 스크린샷이 있다면 첨부해주세요.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 운영체제 종류와 버전
+      description: 어떤 운영체제를 사용중인지, 해당 운영체제의 버전은 무엇인지 작성해주세요. 
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 세부 버전
+      description: Vocabulary Quiz App의 릴리즈 버전과 사용중인 파이썬 버전을 알려주세요.
+  - type: textarea
+    attributes:
+      label: 기타
+      description: 추가적으로 언급하고 싶은 내용이 있다면 이곳에 작성해주세요.
