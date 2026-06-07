@@ -10,6 +10,9 @@ from vocabulary_quiz_app.quiz_logic import Word, check_answer, draw_word
 
 class VocabularyQuizApp:
     def __init__(self, root: tk.Tk, words: list[Word]) -> None:
+        def on_enter_pressed(event) -> None:
+            self.check_current()
+
         self.words = words
         self.rng = random.Random()
         self.current: Word | None = None
@@ -32,6 +35,8 @@ class VocabularyQuizApp:
         ttk.Label(root, textvariable=self.word_var, font=("NanumGothic", 24)).pack()
 
         self.answer_entry = ttk.Entry(root, font=("NanumGothic", 14))
+        self.answer_entry.bind("<Return>", on_enter_pressed)
+
         self.answer_entry.pack(pady=12, ipadx=6, ipady=4)
 
         buttons = ttk.Frame(root)
