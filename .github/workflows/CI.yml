@@ -23,3 +23,30 @@ jobs:
 
       - name: Run tests
         run: uv run pytest -q
+
+  build:
+    name: Build
+    runs-on: windows-2025
+    needs: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --group test
+
+      - name: Install Pyinstaller
+        run: uv pip install pyinstaller
+
+      - name: Build
+        run: pyinstaller --onefile main.py
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: voca-app-build-artifact
+          path: ./
